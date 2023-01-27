@@ -1,13 +1,349 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.limita-largura {
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 36px;
+  margin: 0;
+}
+
+/* TOPO HEADER */
+header {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+div.content-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.content-nav img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+ul.nav-list {
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+/* SECAO CAPA */
+section#secao-capa {
+  background-image: url('/public/assets/images/capa.png');
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  padding-block: 2%;
+}
+
+div.content-banner {
+  color: white;
+  font-family: 'Anybody', cursive;
+  height: 96%;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.content-banner p {
+  font-size: 36px;
+  color: rgb(196, 196, 196);
+}
+
+.content-banner h1 {
+  font-size: 60px;
+  margin: 0;
+  color: #fff;
+  line-height: 70px;
+  letter-spacing: 5px;
+}
+
+/* SECAO PRODUTOS */
+section#products {
+  width: 100%;
+  padding: 100px 20px;
+}
+
+div.oculos-cards {
+  margin: 50px 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.oculos-cards .card {
+  width: calc(50% - 15px);
+  padding: 20px 10px;
+  margin: 5px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.card img {
+  object-fit: contain;
+  margin-block: 30px;
+}
+
+.card h3 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.card p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+ul.benefits-list {
+  padding-inline: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.benefits-list li {
+  margin-left: 5px;
+}
+
+/* SECAO SOBRE */
+sectio#about {
+  width: 100%;
+  background-color: #f8f7ff;
+  padding: 100px 20px;
+}
+
+div.content-about p::first-child {
+  line-height: 32px;
+}
+
+div.card-sobre-container {
+  margin-top: 50px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.card-sobre-container .card-sobre {
+  width: 50%;
+  border: 1px solid #a2adad;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.card-sobre-texto {
+  padding: 20px 25px;
+}
+
+.card-sobre-texto h3 {
+  text-transform: uppercase;
+  font: 36px 'Anybody', cursive;
+  letter-spacing: 5px;
+  line-height: 42px;
+}
+
+.card-sobre-texto p {
+  color: #4a4a4a;
+  font-size: 22px;
+}
+
+.card-sobre img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SECAO CONTATO */
+section#contact {
+  width: 100%;
+  padding: 100px 20px;
+  background-color: #05031b;
+  color: #fff;
+  margin-top: 50px;
+}
+
+div.bloco-pai {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+div.bloco-filho {
+  padding: 15px;
+  text-align: left;
+}
+
+.bloco-filho p {
+  margin-block: 5px;
+}
+
+.bloco-filho p span {
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.bloco-filho img {
+  width: 18px;
+}
+
+/* RODAPE */
+footer {
+  background-color: #030303;
+  color: #adadad;
+  padding: 20px;
+}
+
+/* MEDIA QUIRES */
+@media screen and (max-width: 768px) {
+
+  /* SECAO BANNER */
+  .content-banner h1 {
+    font-size: 40px;
+    width: 100%;
+    max-width: 350px;
+    text-align: left;
+  }
+
+  .content-banner p {
+    font-size: 20px;
+  }
+
+  /* SECAO PRODUTOS */
+  section#products {
+    padding: 60px 20px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+  }
+
+  .card img {
+    height: 100px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+
+  /* SECAO SOBRE */
+  .card-sobre-texto {
+    padding: 15px;
+  }
+
+  .card-sobre-texto h3 {
+    font-size: 22px;
+  }
+
+  .card-sobre-texto p {
+    font-size: 16px;
+  }
+
+  /* SECAO CONTATO */
+  section#contact {
+    padding: 60px 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  
+  /* HEADER */
+  div.content-nav {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  nav {
+    width: 96%;
+  }
+
+  .nav-list {
+    width: 96%;
+    margin-top: 10px;
+    padding-top: 10px;
+    justify-content: center;
+    border-top: 1px solid #aaadaf;
+  }
+
+  /* SECAO BANNER */ 
+  section#secao-capa {
+    background-position: 89% center;
+  }
+
+  /* SECAO PRODUTOS */ 
+  section#products {
+    padding-inline: 10px;
+  }
+
+  .oculos-cards .card {
+    width: 100%;
+  }
+
+  ul.benefits-list {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  /* SECAO SOBRE */ 
+  section#contact {
+    padding-inline: 10px;
+  }
+
+  div.card-sobre-container {
+    flex-flow: column nowrap;
+  }
+
+   div.card-sobre-container .card-sobre {
+    width: 100%;
+    height: 300px;
+  }
+
+  /* SECAO CONTATO */
+  section#contact {
+    padding-inline: 10px;
+  }
+
+  div.bloco-filho {
+    text-align: center;
+  }
+
+  .bloco-filho p {
+    width: 200px;
+  }
 }
